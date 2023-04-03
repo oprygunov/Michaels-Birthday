@@ -11,150 +11,99 @@ import AVFoundation
 import Lottie
 
 final class MainView: View {
-
+    
+    private let imageArray = [UIImage(named: "image1"), UIImage(named: "image2")]
+    private var currentImageIndex = 0
     private var audioPlayer: AVAudioPlayer?
-
-    private let barBack: UIImageView = {
+    
+    private let image: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
+    private let barBack: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "wine")
         return view
     }()
-
+    
     private let lottie: LottieAnimationView = {
         let view = LottieAnimationView(name: "confetti3")
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
         view.play()
         view.loopMode = .loop
+        view.alpha = 0.6
         return view
     }()
-
-    private lazy var imageView: UIImageView = {
-        // Получаем путь к GIF файлу из Assets
-        guard let path = Bundle.main.path(forResource: "dance", ofType: "gif") else { return UIImageView() }
-        let url = URL(fileURLWithPath: path)
-
-        // Создаем объект анимированной картинки из GIF файла
-        guard let data = try? Data(contentsOf: url), let image = UIImage.gif(data: data) else { return UIImageView() }
-
-        // Устанавливаем анимированную картинку в UIImageView
-        let view = UIImageView(image: image)
-        // Устанавливаем количество повторов анимации на бесконечность
-        view.animationRepeatCount = 0
-        // Устанавливаем размеры UIImageView
-        //        view.frame = CGRect(x: 0, y: 0, width: 200, height: 340)
-        // Устанавливаем центр UIImageView на середину экрана
-        // view.center = self.center
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    private let tableImage: UIImageView = {
-        let view = UIImageView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = UIImage(named: "bar")
-        return view
-    }()
-
+    
     private let lottieConfetti: LottieAnimationView = {
         let view = LottieAnimationView(name: "confetti3")
         view.translatesAutoresizingMaskIntoConstraints = false
         view.play()
         view.loopMode = .loop
+        view.alpha = 0.6
         return view
     }()
-
-
+    
+    private let tableImage: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: "bar")
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
     override func setupContent() {
         super.setupContent()
-
         backgroundColor = .white
         addSubview(barBack)
-
-        addSubview(imageView)
-
+        addSubview(image)
         addSubview(tableImage)
-
         addSubview(lottie)
         addSubview(lottieConfetti)
-
-        // Запускаем анимацию
-        //imageView.startAnimating()
-
-        // Создаем объект AVAudioPlayer
+        
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
+            UIView.transition(with: self.image, duration: 0, options: .transitionCrossDissolve, animations: {
+                let currentImage = self.imageArray[self.currentImageIndex]
+                self.image.image = currentImage
+                self.currentImageIndex = (self.currentImageIndex + 1) % self.imageArray.count
+            }, completion: nil)
+        }
+        
         guard let path = Bundle.main.path(forResource: "musicFast", ofType: "mp3") else { return }
         let url = URL(fileURLWithPath: path)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.numberOfLoops = -1 // -1 означает, что музыка будет воспроизводиться бесконечно
+            audioPlayer?.numberOfLoops = -1
             audioPlayer?.play()
         } catch {
             print("Failed to play background music")
         }
     }
-
+    
     override func setupLayout() {
         super.setupLayout()
-
-        barBack.topAnchor ~= topAnchor - 265
+        
+        barBack.topAnchor ~= safeAreaLayoutGuide.topAnchor
         barBack.leftAnchor ~= leftAnchor
         barBack.rightAnchor ~= rightAnchor
-        //        barBack.widthAnchor ~= 400
-
-
-
-        lottie.leftAnchor ~= leftAnchor
-        lottie.centerYAnchor ~= centerYAnchor - 200
-        lottie.centerXAnchor ~= centerXAnchor
-
-
-        //        imageView.center = center
-        imageView.centerXAnchor ~= centerXAnchor
-        imageView.centerYAnchor ~= centerYAnchor
-
+        barBack.heightAnchor ~= 300
+        
+        image.centerXAnchor ~= centerXAnchor
+        image.leftAnchor ~= leftAnchor - 30
+        image.centerYAnchor ~= centerYAnchor
+        
+        lottieConfetti.leftAnchor ~= leftAnchor - 60
+        lottieConfetti.rightAnchor ~= rightAnchor + 100
+        lottieConfetti.centerYAnchor ~= centerYAnchor - 50
+        
         tableImage.bottomAnchor ~= bottomAnchor
         tableImage.leftAnchor ~= leftAnchor
         tableImage.rightAnchor ~= rightAnchor
-        //        boxImage.widthAnchor ~= 300
         tableImage.heightAnchor ~= 280
-
-        //        lottieTable.topAnchor ~= topAnchor
-        //        lottieConfetti.leftAnchor ~= leftAnchor
-        //        lottieTable.rightAnchor ~= rightAnchor
-        //        lottieConfetti.bottomAnchor ~= bottomAnchor
-
-        //        lottieTable.centerYAnchor ~= centerYAnchor - 180
-        //        lottieTable.centerXAnchor ~= centerXAnchor
-
-    }
-
-    deinit {
-        // Остановить проигрывание музыки при удалении экрана
-        audioPlayer?.stop()
     }
 }
-
-
-extension UIImage {
-    static func gif(data: Data) -> UIImage? {
-        // Создаем объект CGImageSource из переданных данных
-        guard let source = CGImageSourceCreateWithData(data as CFData, nil) else { return nil }
-
-        // Получаем количество кадров GIF изображения
-        let count = CGImageSourceGetCount(source)
-
-        // Получаем кадры GIF изображения и добавляем их в массив
-        var images: [UIImage] = []
-        for i in 0..<count {
-            if let cgImage = CGImageSourceCreateImageAtIndex(source, i, nil) {
-                images.append(UIImage(cgImage: cgImage))
-            }
-        }
-
-        // Создаем анимированную картинку из кадров GIF изображения
-        return UIImage.animatedImage(with: images, duration: 1.0)
-    }
-}
-

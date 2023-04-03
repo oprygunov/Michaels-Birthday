@@ -8,8 +8,11 @@
 
 import UIKit
 import Lottie
+import AVFoundation
 
 final class WelcomeView: UIControl {
+    
+    var audioPlayer: AVAudioPlayer?
     
     enum Action {
         case tap
@@ -24,8 +27,8 @@ final class WelcomeView: UIControl {
                     fromProgress: 0.23,
                     toProgress: 1,
                     loopMode: .playOnce,
-                    completion: { _ in
-                        self.lottie.play(
+                    completion: { [weak self] _ in
+                        self?.lottie.play(
                             fromProgress: 1,
                             toProgress: 0.7,
                             loopMode: .autoReverse,
@@ -110,6 +113,16 @@ final class WelcomeView: UIControl {
             ),
             for: .touchUpInside
         )
+        
+        guard let path = Bundle.main.path(forResource: "music", ofType: "mp3") else { return }
+        let url = URL(fileURLWithPath: path)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.numberOfLoops = -1
+            audioPlayer?.play()
+        } catch {
+            print("Failed to play background music")
+        }
     }
     
     required init?(coder: NSCoder) {

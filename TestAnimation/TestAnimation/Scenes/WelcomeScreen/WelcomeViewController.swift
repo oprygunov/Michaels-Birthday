@@ -34,6 +34,7 @@ extension WelcomeViewController: WelcomeDisplayLogic {
             rootView.viewModel = viewModel.root
         }
         else {
+            rootView.audioPlayer?.stop()
             router?.next()
         }
     }

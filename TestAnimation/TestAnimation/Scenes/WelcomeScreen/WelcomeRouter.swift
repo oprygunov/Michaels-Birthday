@@ -20,6 +20,6 @@ final class WelcomeRouter {
 
 extension WelcomeRouter: WelcomeRoutingLogic {
     func next() {
-        viewController?.navigationController?.viewControllers = [MainBuilder.build()]
+        viewController?.navigationController?.pushViewController(MainBuilder.build(), animated: true)
     }
 }
