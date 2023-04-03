@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8263893529DAF18100FCA185 /* 20230403_171625.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8263893429DAF18100FCA185 /* 20230403_171625.gif */; };
+		8263893929DAF2C600FCA185 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8263893829DAF2C600FCA185 /* Lottie */; };
+		8263894429DAF31200FCA185 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263893B29DAF31200FCA185 /* WelcomePresenter.swift */; };
+		8263894529DAF31200FCA185 /* WelcomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263893C29DAF31200FCA185 /* WelcomeWorker.swift */; };
+		8263894629DAF31200FCA185 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263893D29DAF31200FCA185 /* WelcomeRouter.swift */; };
+		8263894729DAF31200FCA185 /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263893E29DAF31200FCA185 /* WelcomeModels.swift */; };
+		8263894829DAF31200FCA185 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263893F29DAF31200FCA185 /* WelcomeViewController.swift */; };
+		8263894929DAF31200FCA185 /* WelcomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263894029DAF31200FCA185 /* WelcomeProtocols.swift */; };
+		8263894A29DAF31200FCA185 /* WelcomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263894129DAF31200FCA185 /* WelcomeBuilder.swift */; };
+		8263894B29DAF31200FCA185 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263894229DAF31200FCA185 /* WelcomeInteractor.swift */; };
+		8263894C29DAF31200FCA185 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263894329DAF31200FCA185 /* WelcomeView.swift */; };
 		CED6985629DADE9F009CEDB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6985529DADE9F009CEDB3 /* AppDelegate.swift */; };
 		CED6985829DADE9F009CEDB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6985729DADE9F009CEDB3 /* SceneDelegate.swift */; };
 		CED6985A29DADE9F009CEDB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6985929DADE9F009CEDB3 /* ViewController.swift */; };
@@ -46,6 +57,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8263893429DAF18100FCA185 /* 20230403_171625.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 20230403_171625.gif; sourceTree = "<group>"; };
+		8263893B29DAF31200FCA185 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		8263893C29DAF31200FCA185 /* WelcomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeWorker.swift; sourceTree = "<group>"; };
+		8263893D29DAF31200FCA185 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		8263893E29DAF31200FCA185 /* WelcomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModels.swift; sourceTree = "<group>"; };
+		8263893F29DAF31200FCA185 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		8263894029DAF31200FCA185 /* WelcomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeProtocols.swift; sourceTree = "<group>"; };
+		8263894129DAF31200FCA185 /* WelcomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBuilder.swift; sourceTree = "<group>"; };
+		8263894229DAF31200FCA185 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		8263894329DAF31200FCA185 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		CED6985229DADE9F009CEDB3 /* TestAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED6985529DADE9F009CEDB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED6985729DADE9F009CEDB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8263893929DAF2C600FCA185 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +118,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8263893629DAF1D300FCA185 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				8263893429DAF18100FCA185 /* 20230403_171625.gif */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		8263893A29DAF2DC00FCA185 /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8263893B29DAF31200FCA185 /* WelcomePresenter.swift */,
+				8263893C29DAF31200FCA185 /* WelcomeWorker.swift */,
+				8263893D29DAF31200FCA185 /* WelcomeRouter.swift */,
+				8263893E29DAF31200FCA185 /* WelcomeModels.swift */,
+				8263893F29DAF31200FCA185 /* WelcomeViewController.swift */,
+				8263894029DAF31200FCA185 /* WelcomeProtocols.swift */,
+				8263894129DAF31200FCA185 /* WelcomeBuilder.swift */,
+				8263894229DAF31200FCA185 /* WelcomeInteractor.swift */,
+				8263894329DAF31200FCA185 /* WelcomeView.swift */,
+			);
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
 		CED6984929DADE9F009CEDB3 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +165,7 @@
 		CED6985429DADE9F009CEDB3 /* TestAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				8263893629DAF1D300FCA185 /* Image */,
 				CED6988529DADEB5009CEDB3 /* Scenes */,
 				CED6989929DAE053009CEDB3 /* UIComponents */,
 				CED6985529DADE9F009CEDB3 /* AppDelegate.swift */,
@@ -151,6 +198,7 @@
 		CED6988529DADEB5009CEDB3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8263893A29DAF2DC00FCA185 /* WelcomeScreen */,
 				CED6988629DADEC2009CEDB3 /* MainScreen */,
 			);
 			path = Scenes;
@@ -205,6 +253,9 @@
 			dependencies = (
 			);
 			name = TestAnimation;
+			packageProductDependencies = (
+				8263893829DAF2C600FCA185 /* Lottie */,
+			);
 			productName = TestAnimation;
 			productReference = CED6985229DADE9F009CEDB3 /* TestAnimation.app */;
 			productType = "com.apple.product-type.application";
@@ -277,6 +328,9 @@
 				Base,
 			);
 			mainGroup = CED6984929DADE9F009CEDB3;
+			packageReferences = (
+				8263893729DAF2C600FCA185 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = CED6985329DADE9F009CEDB3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8263893529DAF18100FCA185 /* 20230403_171625.gif in Resources */,
 				CED6986229DADEA2009CEDB3 /* LaunchScreen.storyboard in Resources */,
 				CED6985F29DADEA2009CEDB3 /* Assets.xcassets in Resources */,
 			);
@@ -320,19 +375,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED6985A29DADE9F009CEDB3 /* ViewController.swift in Sources */,
+				8263894429DAF31200FCA185 /* WelcomePresenter.swift in Sources */,
+				8263894929DAF31200FCA185 /* WelcomeProtocols.swift in Sources */,
 				CED6989829DADEFC009CEDB3 /* MainView.swift in Sources */,
 				CED6985629DADE9F009CEDB3 /* AppDelegate.swift in Sources */,
+				8263894529DAF31200FCA185 /* WelcomeWorker.swift in Sources */,
 				CED6989529DADEFC009CEDB3 /* MainProtocols.swift in Sources */,
 				CED6985829DADE9F009CEDB3 /* SceneDelegate.swift in Sources */,
+				8263894A29DAF31200FCA185 /* WelcomeBuilder.swift in Sources */,
+				8263894629DAF31200FCA185 /* WelcomeRouter.swift in Sources */,
+				8263894C29DAF31200FCA185 /* WelcomeView.swift in Sources */,
 				CED6989629DADEFC009CEDB3 /* MainBuilder.swift in Sources */,
 				CED6989129DADEFC009CEDB3 /* MainWorker.swift in Sources */,
 				CED6989D29DAE0A6009CEDB3 /* UIView+Layout.swift in Sources */,
+				8263894B29DAF31200FCA185 /* WelcomeInteractor.swift in Sources */,
 				CED6989729DADEFC009CEDB3 /* MainInteractor.swift in Sources */,
 				CED6989029DADEFC009CEDB3 /* MainPresenter.swift in Sources */,
 				CED6989329DADEFC009CEDB3 /* MainModels.swift in Sources */,
+				8263894729DAF31200FCA185 /* WelcomeModels.swift in Sources */,
 				CED6989229DADEFC009CEDB3 /* MainRouter.swift in Sources */,
 				CED6989E29DAE0A6009CEDB3 /* View.swift in Sources */,
 				CED6989429DADEFC009CEDB3 /* MainViewController.swift in Sources */,
+				8263894829DAF31200FCA185 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +722,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8263893729DAF2C600FCA185 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8263893829DAF2C600FCA185 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8263893729DAF2C600FCA185 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CED6984A29DADE9F009CEDB3 /* Project object */;
 }
