@@ -9,19 +9,19 @@
 import Foundation
 
 protocol WelcomeBusinessLogic: AnyObject {
-    func request(_ request: Welcome.Something.Request)
+    func request(_ request: Welcome.Tap.Request)
 }
 
 protocol WelcomePresentationLogic: AnyObject {
-    func present(_ response: Welcome.Something.Response)
+    func present(_ response: Welcome.Tap.Response)
 }
 
 protocol WelcomeDisplayLogic: AnyObject {
-    func display(_ viewModel: Welcome.Something.ViewModel)
+    func display(_ viewModel: Welcome.Tap.ViewModel)
 }
 
 protocol WelcomeRoutingLogic: AnyObject {
-    func show()
+    func next()
 }
 
 protocol WelcomeDataStore: AnyObject {}

@@ -40,6 +40,8 @@
 		CED6989829DADEFC009CEDB3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6988F29DADEFC009CEDB3 /* MainView.swift */; };
 		CED6989D29DAE0A6009CEDB3 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6989B29DAE0A4009CEDB3 /* UIView+Layout.swift */; };
 		CED6989E29DAE0A6009CEDB3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6989C29DAE0A6009CEDB3 /* View.swift */; };
+		CED698A529DB15C9009CEDB3 /* Akrobatbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED698A429DB15C9009CEDB3 /* Akrobatbold.ttf */; };
+		CED698A729DB160D009CEDB3 /* Akrobat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED698A629DB160D009CEDB3 /* Akrobat.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		CED6988F29DADEFC009CEDB3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CED6989B29DAE0A4009CEDB3 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		CED6989C29DAE0A6009CEDB3 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		CED698A429DB15C9009CEDB3 /* Akrobatbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Akrobatbold.ttf; sourceTree = "<group>"; };
+		CED698A629DB160D009CEDB3 /* Akrobat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Akrobat.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,7 @@
 		CED6989929DAE053009CEDB3 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				CED698A129DB146A009CEDB3 /* Fonts */,
 				CED6989A29DAE065009CEDB3 /* Extensions */,
 			);
 			path = UIComponents;
@@ -252,6 +257,15 @@
 				CED6989C29DAE0A6009CEDB3 /* View.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CED698A129DB146A009CEDB3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CED698A629DB160D009CEDB3 /* Akrobat.ttf */,
+				CED698A429DB15C9009CEDB3 /* Akrobatbold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +379,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8263894E29DAFC6E00FCA185 /* music.mp3 in Resources */,
+				CED698A729DB160D009CEDB3 /* Akrobat.ttf in Resources */,
+				CED698A529DB15C9009CEDB3 /* Akrobatbold.ttf in Resources */,
 				8263893529DAF18100FCA185 /* 20230403_171625.gif in Resources */,
 				8263895429DB278F00FCA185 /* musicFast.mp3 in Resources */,
 				CED6986229DADEA2009CEDB3 /* LaunchScreen.storyboard in Resources */,

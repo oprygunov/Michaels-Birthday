@@ -9,11 +9,26 @@
 import Foundation
 
 enum Welcome {
-    enum Something {
+    
+    enum Tap {
         struct Request {}
 
-        struct Response {}
+        struct Response {
+            var model:  Model
+        }
 
-        struct ViewModel {}
+        struct ViewModel {
+            var root:  RootViewModel
+        }
+    }
+    
+    struct Model {
+        var firstTap: Bool
+        var secondTap: Bool
+    }
+    
+    struct RootViewModel {
+        var firstTap: Bool
+        var secondTap: Bool
     }
 }
