@@ -18,6 +18,9 @@
 		8263894A29DAF31200FCA185 /* WelcomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263894129DAF31200FCA185 /* WelcomeBuilder.swift */; };
 		8263894B29DAF31200FCA185 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263894229DAF31200FCA185 /* WelcomeInteractor.swift */; };
 		8263894C29DAF31200FCA185 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8263894329DAF31200FCA185 /* WelcomeView.swift */; };
+		8263894E29DAFC6E00FCA185 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8263894D29DAFC6E00FCA185 /* music.mp3 */; };
+		8263895229DB04EA00FCA185 /* dance.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8263895129DB04EA00FCA185 /* dance.gif */; };
+		8263895429DB278F00FCA185 /* musicFast.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8263895329DB278F00FCA185 /* musicFast.mp3 */; };
 		CED6985629DADE9F009CEDB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6985529DADE9F009CEDB3 /* AppDelegate.swift */; };
 		CED6985829DADE9F009CEDB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6985729DADE9F009CEDB3 /* SceneDelegate.swift */; };
 		CED6985A29DADE9F009CEDB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6985929DADE9F009CEDB3 /* ViewController.swift */; };
@@ -67,6 +70,9 @@
 		8263894129DAF31200FCA185 /* WelcomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBuilder.swift; sourceTree = "<group>"; };
 		8263894229DAF31200FCA185 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
 		8263894329DAF31200FCA185 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		8263894D29DAFC6E00FCA185 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		8263895129DB04EA00FCA185 /* dance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dance.gif; sourceTree = "<group>"; };
+		8263895329DB278F00FCA185 /* musicFast.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicFast.mp3; sourceTree = "<group>"; };
 		CED6985229DADE9F009CEDB3 /* TestAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED6985529DADE9F009CEDB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED6985729DADE9F009CEDB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				8263893429DAF18100FCA185 /* 20230403_171625.gif */,
+				8263895129DB04EA00FCA185 /* dance.gif */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -140,6 +147,15 @@
 				8263894329DAF31200FCA185 /* WelcomeView.swift */,
 			);
 			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		8263895529DB279800FCA185 /* Musics */ = {
+			isa = PBXGroup;
+			children = (
+				8263894D29DAFC6E00FCA185 /* music.mp3 */,
+				8263895329DB278F00FCA185 /* musicFast.mp3 */,
+			);
+			path = Musics;
 			sourceTree = "<group>";
 		};
 		CED6984929DADE9F009CEDB3 = {
@@ -165,6 +181,7 @@
 		CED6985429DADE9F009CEDB3 /* TestAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				8263895529DB279800FCA185 /* Musics */,
 				8263893629DAF1D300FCA185 /* Image */,
 				CED6988529DADEB5009CEDB3 /* Scenes */,
 				CED6989929DAE053009CEDB3 /* UIComponents */,
@@ -347,9 +364,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8263894E29DAFC6E00FCA185 /* music.mp3 in Resources */,
 				8263893529DAF18100FCA185 /* 20230403_171625.gif in Resources */,
+				8263895429DB278F00FCA185 /* musicFast.mp3 in Resources */,
 				CED6986229DADEA2009CEDB3 /* LaunchScreen.storyboard in Resources */,
 				CED6985F29DADEA2009CEDB3 /* Assets.xcassets in Resources */,
+				8263895229DB04EA00FCA185 /* dance.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
