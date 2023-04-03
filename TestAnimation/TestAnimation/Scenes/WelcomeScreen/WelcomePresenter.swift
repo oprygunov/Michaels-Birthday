@@ -15,7 +15,7 @@ final class WelcomePresenter {
 }
 
 extension WelcomePresenter: WelcomePresentationLogic {
-    func present(_ response: Welcome.Something.Response) {
-        view?.display(Welcome.Something.ViewModel())
+    func present(_ response: Welcome.Tap.Response) {
+        view?.display(Welcome.Tap.ViewModel(root: .init(firstTap: response.model.firstTap, secondTap: response.model.secondTap)))
     }
 }
