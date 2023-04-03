@@ -12,17 +12,29 @@ final class WelcomeViewController: UIViewController {
     var interactor: WelcomeBusinessLogic?
     var router: WelcomeRoutingLogic?
 
-    private let rootView = WelcomeView()
+    private lazy var rootView = WelcomeView()
 
     override func loadView() {
         super.loadView()
         view = rootView
+        
+        rootView.actionHandler = { action in
+            switch action {
+            case .tap:
+                self.interactor?.request(Welcome.Tap.Request())
+            }
+        }
     }
 
 }
 
 extension WelcomeViewController: WelcomeDisplayLogic {
-    func display(_ viewModel: Welcome.Something.ViewModel) {
-
+    func display(_ viewModel: Welcome.Tap.ViewModel) {
+        if !viewModel.root.secondTap {
+            rootView.viewModel = viewModel.root
+        }
+        else {
+            router?.next()
+        }
     }
 }

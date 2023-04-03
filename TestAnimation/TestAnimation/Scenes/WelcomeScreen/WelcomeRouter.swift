@@ -19,7 +19,7 @@ final class WelcomeRouter {
 }
 
 extension WelcomeRouter: WelcomeRoutingLogic {
-    func show() {
-
+    func next() {
+        viewController?.navigationController?.viewControllers = [MainBuilder.build()]
     }
 }
