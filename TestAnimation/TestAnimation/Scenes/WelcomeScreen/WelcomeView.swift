@@ -76,7 +76,7 @@ final class WelcomeView: UIControl {
     private var text: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "TExt fsfsf f sf sf sf s fs f sf sf s fs f sfsfsfsf sfsfsf sf sf sf sf sf sfs fs fsfsfsf sfsf sf sf sfsfsf sfsfsfs fs fs fs f sf sfsfsf sfsf sf sf"
+        view.text = "Добрый день, наш диар тича Михаил! \n \n Научил ты нас достаточно многому, поэтому в столь прекрасный день мы не могли оставить тебя без нашего <ВойтиВайтишного> программистского сюрприза. Мы очень сильно поздравляем тебя с твоим днём рождения! И дарим тебе этот апп!! Ура!!!"
         view.alpha = 0
         view.textAlignment = .center
         view.textColor = .black
@@ -102,7 +102,7 @@ final class WelcomeView: UIControl {
         label.bottomAnchor ~= safeAreaLayoutGuide.bottomAnchor - 20
         
         text.centerXAnchor ~= centerXAnchor
-        text.topAnchor ~= lottie.topAnchor + 300
+        text.topAnchor ~= lottie.topAnchor + 230
         text.leftAnchor ~= leftAnchor + 20
         
         addAction(

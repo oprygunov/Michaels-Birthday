@@ -15,6 +15,7 @@ final class MainView: View {
     private let imageArray = [UIImage(named: "image1"), UIImage(named: "image2")]
     private var currentImageIndex = 0
     private var audioPlayer: AVAudioPlayer?
+    private let gradientLayer = CAGradientLayer()
     
     private let image: UIImageView = {
         let view = UIImageView()
@@ -56,17 +57,41 @@ final class MainView: View {
         view.contentMode = .scaleAspectFit
         return view
     }()
+
+    private let lottieBack: LottieAnimationView = {
+        let view = LottieAnimationView(name: "backdot")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.play()
+        view.loopMode = .loop
+        view.alpha = 0.7
+        return view
+    }()
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = bounds
+    }
     
     override func setupContent() {
         super.setupContent()
-        backgroundColor = .white
+
+        let gradientColors = [#colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1).cgColor, #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1).cgColor, #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor, #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1).cgColor]
+
+        gradientLayer.colors = gradientColors
+        gradientLayer.locations = [0.0, 0.3, 0.7, 1.0]
+        gradientLayer.frame = bounds
+
+        layer.insertSublayer(gradientLayer, at: 0)
+        backgroundColor = #colorLiteral(red: 0.8721764684, green: 0.7579173446, blue: 0.8361523747, alpha: 0.8682504252)
+        addSubview(lottieBack)
+        addSubview(lottieBack)
         addSubview(barBack)
         addSubview(image)
         addSubview(tableImage)
         addSubview(lottie)
         addSubview(lottieConfetti)
         
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true) { timer in
             UIView.transition(with: self.image, duration: 0, options: .transitionCrossDissolve, animations: {
                 let currentImage = self.imageArray[self.currentImageIndex]
                 self.image.image = currentImage
@@ -87,11 +112,12 @@ final class MainView: View {
     
     override func setupLayout() {
         super.setupLayout()
+        lottieBack.pinToSuperview()
         
-        barBack.topAnchor ~= safeAreaLayoutGuide.topAnchor
+        barBack.topAnchor ~= topAnchor
         barBack.leftAnchor ~= leftAnchor
         barBack.rightAnchor ~= rightAnchor
-        barBack.heightAnchor ~= 300
+        barBack.heightAnchor ~= 450
         
         image.centerXAnchor ~= centerXAnchor
         image.leftAnchor ~= leftAnchor - 30
@@ -101,9 +127,9 @@ final class MainView: View {
         lottieConfetti.rightAnchor ~= rightAnchor + 100
         lottieConfetti.centerYAnchor ~= centerYAnchor - 50
         
-        tableImage.bottomAnchor ~= bottomAnchor
+        tableImage.bottomAnchor ~= bottomAnchor + 150
         tableImage.leftAnchor ~= leftAnchor
-        tableImage.rightAnchor ~= rightAnchor
-        tableImage.heightAnchor ~= 280
+        tableImage.widthAnchor ~= 620
+        tableImage.heightAnchor ~= 600
     }
 }
