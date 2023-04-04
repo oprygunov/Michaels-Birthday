@@ -19,8 +19,8 @@ final class MainInteractor {
 }
 
 extension MainInteractor: MainBusinessLogic {
-    func request(_ request: Main.Something.Request) {
-
+    func request(_ request: Main.Tap.Request) {
+        presenter.present(Main.Tap.Response())
     }
 }
 

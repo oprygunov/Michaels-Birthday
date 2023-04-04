@@ -12,10 +12,16 @@ import Lottie
 
 final class MainView: View {
     
+    enum Action {
+        case tap
+    }
+    
+    var actionHandler: (Action) -> Void = { _ in }
+    
     private let imageArray = [UIImage(named: "image1"), UIImage(named: "image2")]
     private var currentImageIndex = 0
-    private var audioPlayer: AVAudioPlayer?
     private let gradientLayer = CAGradientLayer()
+    var audioPlayer: AVAudioPlayer?
     
     private let image: UIImageView = {
         let view = UIImageView()
@@ -66,6 +72,16 @@ final class MainView: View {
         view.alpha = 0.7
         return view
     }()
+    
+    private lazy var gift: GiftCustomView = {
+        let view = GiftCustomView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.alpha = 0
+        view.actionHandler = {
+            self.actionHandler(.tap)
+        }
+        return view
+    }()
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -90,6 +106,7 @@ final class MainView: View {
         addSubview(tableImage)
         addSubview(lottie)
         addSubview(lottieConfetti)
+        addSubview(gift)
         
         Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true) { timer in
             UIView.transition(with: self.image, duration: 0, options: .transitionCrossDissolve, animations: {
@@ -107,6 +124,10 @@ final class MainView: View {
             audioPlayer?.play()
         } catch {
             print("Failed to play background music")
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            self.gift.alpha = 1
         }
     }
     
@@ -131,5 +152,10 @@ final class MainView: View {
         tableImage.leftAnchor ~= leftAnchor
         tableImage.widthAnchor ~= 620
         tableImage.heightAnchor ~= 600
+        
+        gift.heightAnchor ~= 200
+        gift.widthAnchor ~= 200
+        gift.centerYAnchor ~= centerYAnchor + 100
+        gift.rightAnchor ~= rightAnchor + 30
     }
 }

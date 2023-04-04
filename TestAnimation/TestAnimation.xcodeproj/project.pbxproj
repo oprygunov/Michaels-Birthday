@@ -21,6 +21,15 @@
 		8263894E29DAFC6E00FCA185 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8263894D29DAFC6E00FCA185 /* music.mp3 */; };
 		8263895229DB04EA00FCA185 /* dance.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8263895129DB04EA00FCA185 /* dance.gif */; };
 		8263895429DB278F00FCA185 /* musicFast.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8263895329DB278F00FCA185 /* musicFast.mp3 */; };
+		CE56FCFA29DBF556006D3225 /* GiftPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56FCF129DBF556006D3225 /* GiftPresenter.swift */; };
+		CE56FCFB29DBF556006D3225 /* GiftWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56FCF229DBF556006D3225 /* GiftWorker.swift */; };
+		CE56FCFC29DBF556006D3225 /* GiftRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56FCF329DBF556006D3225 /* GiftRouter.swift */; };
+		CE56FCFD29DBF556006D3225 /* GiftModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56FCF429DBF556006D3225 /* GiftModels.swift */; };
+		CE56FCFE29DBF556006D3225 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56FCF529DBF556006D3225 /* GiftViewController.swift */; };
+		CE56FCFF29DBF556006D3225 /* GiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56FCF629DBF556006D3225 /* GiftProtocols.swift */; };
+		CE56FD0029DBF556006D3225 /* GiftBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56FCF729DBF556006D3225 /* GiftBuilder.swift */; };
+		CE56FD0129DBF556006D3225 /* GiftInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56FCF829DBF556006D3225 /* GiftInteractor.swift */; };
+		CE56FD0229DBF556006D3225 /* GiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56FCF929DBF556006D3225 /* GiftView.swift */; };
 		CED6985629DADE9F009CEDB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6985529DADE9F009CEDB3 /* AppDelegate.swift */; };
 		CED6985829DADE9F009CEDB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6985729DADE9F009CEDB3 /* SceneDelegate.swift */; };
 		CED6985A29DADE9F009CEDB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6985929DADE9F009CEDB3 /* ViewController.swift */; };
@@ -42,6 +51,7 @@
 		CED6989E29DAE0A6009CEDB3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6989C29DAE0A6009CEDB3 /* View.swift */; };
 		CED698A529DB15C9009CEDB3 /* Akrobatbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED698A429DB15C9009CEDB3 /* Akrobatbold.ttf */; };
 		CED698A729DB160D009CEDB3 /* Akrobat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CED698A629DB160D009CEDB3 /* Akrobat.ttf */; };
+		CED698A929DBF060009CEDB3 /* GiftCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED698A829DBF060009CEDB3 /* GiftCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +85,15 @@
 		8263894D29DAFC6E00FCA185 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		8263895129DB04EA00FCA185 /* dance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dance.gif; sourceTree = "<group>"; };
 		8263895329DB278F00FCA185 /* musicFast.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicFast.mp3; sourceTree = "<group>"; };
+		CE56FCF129DBF556006D3225 /* GiftPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPresenter.swift; sourceTree = "<group>"; };
+		CE56FCF229DBF556006D3225 /* GiftWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftWorker.swift; sourceTree = "<group>"; };
+		CE56FCF329DBF556006D3225 /* GiftRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftRouter.swift; sourceTree = "<group>"; };
+		CE56FCF429DBF556006D3225 /* GiftModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftModels.swift; sourceTree = "<group>"; };
+		CE56FCF529DBF556006D3225 /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
+		CE56FCF629DBF556006D3225 /* GiftProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftProtocols.swift; sourceTree = "<group>"; };
+		CE56FCF729DBF556006D3225 /* GiftBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftBuilder.swift; sourceTree = "<group>"; };
+		CE56FCF829DBF556006D3225 /* GiftInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftInteractor.swift; sourceTree = "<group>"; };
+		CE56FCF929DBF556006D3225 /* GiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftView.swift; sourceTree = "<group>"; };
 		CED6985229DADE9F009CEDB3 /* TestAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED6985529DADE9F009CEDB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED6985729DADE9F009CEDB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +119,7 @@
 		CED6989C29DAE0A6009CEDB3 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		CED698A429DB15C9009CEDB3 /* Akrobatbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Akrobatbold.ttf; sourceTree = "<group>"; };
 		CED698A629DB160D009CEDB3 /* Akrobat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Akrobat.ttf; sourceTree = "<group>"; };
+		CED698A829DBF060009CEDB3 /* GiftCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +182,22 @@
 			path = Musics;
 			sourceTree = "<group>";
 		};
+		CE56FCF029DBF52A006D3225 /* GiftScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE56FCF129DBF556006D3225 /* GiftPresenter.swift */,
+				CE56FCF229DBF556006D3225 /* GiftWorker.swift */,
+				CE56FCF329DBF556006D3225 /* GiftRouter.swift */,
+				CE56FCF429DBF556006D3225 /* GiftModels.swift */,
+				CE56FCF529DBF556006D3225 /* GiftViewController.swift */,
+				CE56FCF629DBF556006D3225 /* GiftProtocols.swift */,
+				CE56FCF729DBF556006D3225 /* GiftBuilder.swift */,
+				CE56FCF829DBF556006D3225 /* GiftInteractor.swift */,
+				CE56FCF929DBF556006D3225 /* GiftView.swift */,
+			);
+			path = GiftScreen;
+			sourceTree = "<group>";
+		};
 		CED6984929DADE9F009CEDB3 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +255,7 @@
 		CED6988529DADEB5009CEDB3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CE56FCF029DBF52A006D3225 /* GiftScreen */,
 				8263893A29DAF2DC00FCA185 /* WelcomeScreen */,
 				CED6988629DADEC2009CEDB3 /* MainScreen */,
 			);
@@ -246,6 +283,7 @@
 			children = (
 				CED698A129DB146A009CEDB3 /* Fonts */,
 				CED6989A29DAE065009CEDB3 /* Extensions */,
+				CED698A829DBF060009CEDB3 /* GiftCustomView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -413,20 +451,30 @@
 				CED6985A29DADE9F009CEDB3 /* ViewController.swift in Sources */,
 				8263894429DAF31200FCA185 /* WelcomePresenter.swift in Sources */,
 				8263894929DAF31200FCA185 /* WelcomeProtocols.swift in Sources */,
+				CE56FD0229DBF556006D3225 /* GiftView.swift in Sources */,
 				CED6989829DADEFC009CEDB3 /* MainView.swift in Sources */,
 				CED6985629DADE9F009CEDB3 /* AppDelegate.swift in Sources */,
 				8263894529DAF31200FCA185 /* WelcomeWorker.swift in Sources */,
 				CED6989529DADEFC009CEDB3 /* MainProtocols.swift in Sources */,
+				CE56FCFC29DBF556006D3225 /* GiftRouter.swift in Sources */,
 				CED6985829DADE9F009CEDB3 /* SceneDelegate.swift in Sources */,
+				CE56FCFD29DBF556006D3225 /* GiftModels.swift in Sources */,
 				8263894A29DAF31200FCA185 /* WelcomeBuilder.swift in Sources */,
 				8263894629DAF31200FCA185 /* WelcomeRouter.swift in Sources */,
+				CE56FCFA29DBF556006D3225 /* GiftPresenter.swift in Sources */,
 				8263894C29DAF31200FCA185 /* WelcomeView.swift in Sources */,
 				CED6989629DADEFC009CEDB3 /* MainBuilder.swift in Sources */,
 				CED6989129DADEFC009CEDB3 /* MainWorker.swift in Sources */,
 				CED6989D29DAE0A6009CEDB3 /* UIView+Layout.swift in Sources */,
+				CE56FD0029DBF556006D3225 /* GiftBuilder.swift in Sources */,
+				CE56FCFB29DBF556006D3225 /* GiftWorker.swift in Sources */,
 				8263894B29DAF31200FCA185 /* WelcomeInteractor.swift in Sources */,
+				CE56FD0129DBF556006D3225 /* GiftInteractor.swift in Sources */,
+				CED698A929DBF060009CEDB3 /* GiftCustomView.swift in Sources */,
+				CE56FCFE29DBF556006D3225 /* GiftViewController.swift in Sources */,
 				CED6989729DADEFC009CEDB3 /* MainInteractor.swift in Sources */,
 				CED6989029DADEFC009CEDB3 /* MainPresenter.swift in Sources */,
+				CE56FCFF29DBF556006D3225 /* GiftProtocols.swift in Sources */,
 				CED6989329DADEFC009CEDB3 /* MainModels.swift in Sources */,
 				8263894729DAF31200FCA185 /* WelcomeModels.swift in Sources */,
 				CED6989229DADEFC009CEDB3 /* MainRouter.swift in Sources */,

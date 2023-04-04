@@ -19,7 +19,7 @@ final class MainRouter {
 }
 
 extension MainRouter: MainRoutingLogic {
-    func show() {
-
+    func next() {
+        viewController?.navigationController?.pushViewController(GiftBuilder.build(), animated: true)
     }
 }

@@ -15,7 +15,7 @@ final class MainPresenter {
 }
 
 extension MainPresenter: MainPresentationLogic {
-    func present(_ response: Main.Something.Response) {
-        view?.display(Main.Something.ViewModel())
+    func present(_ response: Main.Tap.Response) {
+        view?.display(Main.Tap.ViewModel())
     }
 }

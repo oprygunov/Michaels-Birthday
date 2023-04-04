@@ -12,17 +12,25 @@ final class MainViewController: UIViewController {
     var interactor: MainBusinessLogic?
     var router: MainRoutingLogic?
 
-    private let rootView = MainView()
+    private lazy var rootView = MainView()
 
     override func loadView() {
         super.loadView()
         view = rootView
+        
+        rootView.actionHandler = { action in
+            switch action {
+            case .tap:
+                self.interactor?.request(Main.Tap.Request())
+            }
+        }
     }
 
 }
 
 extension MainViewController: MainDisplayLogic {
-    func display(_ viewModel: Main.Something.ViewModel) {
-
+    func display(_ viewModel: Main.Tap.ViewModel) {
+        rootView.audioPlayer?.stop()
+        router?.next()
     }
 }
