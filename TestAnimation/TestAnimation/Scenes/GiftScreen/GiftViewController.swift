@@ -12,17 +12,24 @@ final class GiftViewController: UIViewController {
     var interactor: GiftBusinessLogic?
     var router: GiftRoutingLogic?
 
-    private let rootView = GiftView()
+    private lazy var rootView = GiftView()
 
     override func loadView() {
         super.loadView()
         view = rootView
-    }
 
+        rootView.actionHandler = { action in
+            switch action {
+            case .tap:
+                self.interactor?.request(Gift.Tap.Request())
+            }
+        }
+    }
 }
 
 extension GiftViewController: GiftDisplayLogic {
-    func display(_ viewModel: Gift.Something.ViewModel) {
-
+    func display(_ viewModel: Gift.Tap.ViewModel) {
+        rootView.audioPlayer?.stop()
+        router?.show()
     }
 }

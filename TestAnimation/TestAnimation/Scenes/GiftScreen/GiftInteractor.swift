@@ -19,8 +19,8 @@ final class GiftInteractor {
 }
 
 extension GiftInteractor: GiftBusinessLogic {
-    func request(_ request: Gift.Something.Request) {
-
+    func request(_ request: Gift.Tap.Request) {
+        presenter.present(Gift.Tap.Response())
     }
 }
 

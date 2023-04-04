@@ -15,7 +15,7 @@ final class GiftPresenter {
 }
 
 extension GiftPresenter: GiftPresentationLogic {
-    func present(_ response: Gift.Something.Response) {
-        view?.display(Gift.Something.ViewModel())
+    func present(_ response: Gift.Tap.Response) {
+        view?.display(Gift.Tap.ViewModel())
     }
 }

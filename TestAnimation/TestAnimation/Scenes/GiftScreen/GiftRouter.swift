@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 final class GiftRouter {
     weak var viewController: GiftViewController?
@@ -20,6 +21,7 @@ final class GiftRouter {
 
 extension GiftRouter: GiftRoutingLogic {
     func show() {
-
+        guard let url = URL(string: "https://drive.google.com/file/d/198SISsAiPX44hx1H_IHEN_yYNCPC7-NW/view?usp=share_link") else { return }
+        UIApplication.shared.open(url)
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 enum Gift {
-    enum Something {
+    enum Tap {
         struct Request {}
 
         struct Response {}

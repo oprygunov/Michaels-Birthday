@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "music-rhythm.json",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

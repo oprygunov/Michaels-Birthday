@@ -9,15 +9,15 @@
 import Foundation
 
 protocol GiftBusinessLogic: AnyObject {
-    func request(_ request: Gift.Something.Request)
+    func request(_ request: Gift.Tap.Request)
 }
 
 protocol GiftPresentationLogic: AnyObject {
-    func present(_ response: Gift.Something.Response)
+    func present(_ response: Gift.Tap.Response)
 }
 
 protocol GiftDisplayLogic: AnyObject {
-    func display(_ viewModel: Gift.Something.ViewModel)
+    func display(_ viewModel: Gift.Tap.ViewModel)
 }
 
 protocol GiftRoutingLogic: AnyObject {
